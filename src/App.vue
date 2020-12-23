@@ -1,31 +1,146 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
+    <div class="navigation-bg"></div>
+    <b-container class="navigation-bar">
+      <b-row>
+        <b-col class="mt-4" cols="5">
+          <img alt="CC SLO logo" src="./assets/cc_slo_logo.svg">
+        </b-col>
+      </b-row>
+      <b-row class="mt-4 mb-4 text-left">
+        <b-col>
+          <p class="font-italic">
+            Razvoj sodobnih digitalnih tehnologij in interneta sta dodobra pretresla svet
+            avtorskega prava in sta hkrati z neskončnimi možnostmi reprodukcije in distribucije
+            prinesla tudi neslutene možnosti ustvarjanja. Pri tem se je porodila in razširila ideja,
+            da so se nekateri ustvarjalci pripravljeni odreči določenim pravicam, ki jim jih daje
+            avtorsko pravo. Kot alternativa modelu “vse pravice pridržane” se je pojavil model
+            “nekatere pravice pridržane”. Na tej ideji je osnovana tudi neprofitna organizacija
+            Creative Commons (CC), katere namen je s pomočjo vnaprej pripravljenih licenc in podporo
+            ustvarjalcem omogočiti in olajšati razširanje svojih del in hkrati pri ustvarjanju
+            graditi na delih drugih.
+          </p>
+        </b-col>
+      </b-row>
+      <b-row id="nav">
+        <router-link to="/" class="col">
+          <h4>Dan odprtega znanja</h4>
+          <p>TBA</p>
+          <div class="active-tab">
+            <img alt="arrow" src="./assets/arrow.svg">
+          </div>
+        </router-link>
+        <router-link to="/isci" class="col">
+          <h4>Poišči delo, ki ga lahko uporabiš</h4>
+          <p>Išči med več kot 300 milijoni slik, ki jih lahko uporabiš. Rezultate lahko prilagajaš
+              glede na tip licence, vrsto umetniškega dela, tip datoteke in njeno velikost.</p>
+          <div class="active-tab">
+            <img alt="arrow" src="./assets/arrow.svg">
+          </div>
+        </router-link>
+        <router-link to="/deli" class="col">
+          <h4>Deli svoje delo</h4>
+          <p>Bi rad/-a delil/-a svoja dela pa ne veš, katera licenca je prava zate oziroma, kako
+            to čisto zares storiš? Pripravili smo čarovnika, s katerim je to lažje kot kadarkoli
+              prej.</p>
+          <div class="active-tab">
+            <img alt="arrow" src="./assets/arrow.svg">
+          </div>
+        </router-link>
+        <router-link to="/kako-deluje" class="col">
+          <h4>Kako delujejo CC licence?</h4>
+          <p>Razišči različne tipe CC licenc.</p>
+          <div class="active-tab">
+            <img alt="arrow" src="./assets/arrow.svg">
+          </div>
+        </router-link>
+      </b-row>
+    </b-container>
     <router-view/>
   </div>
 </template>
 
 <style lang="scss">
+
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;600&display=swap');
+
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
+  font-family: 'IBM Plex Sans', sans-serif;;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
+}
+
+.navigation-bg {
+  background-color: #c8eb00;
+  opacity: 0.15;
+  width: 100%;
+  height: 400px;
+  position: absolute;
+}
+
+.navigation-bar {
+  p {
+    font-size: 1.2rem;
+    line-height: 120%;
+  }
 }
 
 #nav {
-  padding: 30px;
+  .col {
+    margin: 0.5rem;
+    padding: 1rem;
+    box-shadow: 0 0 2rem rgba(66, 78, 0, 0.5);
+    border-radius: 0.5rem;
+    background-color: white;
+    color: black;
 
-  a {
-    font-weight: bold;
-    color: #2c3e50;
+    &:hover {
+      text-decoration: none;
+
+      h4 {
+        box-shadow: inset 0 -0.1em white, inset 0 -0.6em #c8eb00;
+      }
+    }
 
     &.router-link-exact-active {
-      color: #42b983;
+      text-decoration: none;
+
+      h4 {
+        box-shadow: inset 0 -0.1em white, inset 0 -0.6em #c8eb00;
+      }
+
+      .active-tab {
+        display: block;
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        background-color: #c8eb00;
+        height: 3rem;
+        width: 3rem;
+        border-top-left-radius: 100%;
+        border-bottom-right-radius: 0.5rem;
+
+        img {
+          transform: rotate(-45deg);
+          height: 70%;
+          margin: 0.8rem;
+        }
+      }
+    }
+
+    h4 {
+      text-transform: uppercase;
+      font-weight: 600;
+      display: inline;
+    }
+
+    p {
+      font-size: 0.9rem;
+      padding-top: 0.5rem;
+    }
+
+    .active-tab {
+      display: none;
     }
   }
 }
