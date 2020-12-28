@@ -1,3 +1,3 @@
 <template>
-  <div>Kako deluje</div>
+  <div>kako deluje</div>
 </template>

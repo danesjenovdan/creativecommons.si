@@ -22,7 +22,7 @@
           </p>
         </b-col>
       </b-row>
-      <b-row id="nav">
+      <b-row id="nav" class="mb-4">
         <router-link to="/" class="col">
           <h4>Dan odprtega znanja</h4>
           <p>TBA</p>
@@ -62,12 +62,13 @@
 
 <style lang="scss">
 
-@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,400;0,600;1,500&display=swap');
 
 #app {
   font-family: 'IBM Plex Sans', sans-serif;;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  color: black;
 }
 
 .navigation-bg {
