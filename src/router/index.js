@@ -5,6 +5,7 @@ import Isci from '../views/Isci.vue';
 import Deli from '../views/Deli.vue';
 import KakoDeluje from '../views/KakoDeluje.vue';
 import Zgodovina from '../views/Zgodovina.vue';
+import CCGN from '../views/CCGN.vue';
 
 Vue.use(VueRouter);
 
@@ -33,6 +34,11 @@ const routes = [
     path: '/zgodovina',
     name: 'Zgodovina',
     component: Zgodovina,
+  },
+  {
+    path: '/o-ccgn',
+    name: 'CCGN',
+    component: CCGN,
   },
 ];
 

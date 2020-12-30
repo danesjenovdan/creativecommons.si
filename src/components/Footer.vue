@@ -12,7 +12,7 @@
           <span class="pr-4">O CC</span>
           <router-link to="/isci">Kaj je CC?</router-link>
           <span class="px-2">|</span>
-          <router-link to="/isci">O CCGN</router-link>
+          <router-link to="/o-ccgn">O CCGN</router-link>
         </div>
         <div>
           <a href="mailto:info@creativecommons.si" >info@creativecommons.si</a>
