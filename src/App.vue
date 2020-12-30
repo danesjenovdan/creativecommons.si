@@ -74,7 +74,7 @@ export default {
 
 <style lang="scss">
 
-@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,400;0,600;1,400;1,500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap');
 
 #app {
   font-family: 'IBM Plex Sans', sans-serif;;
@@ -157,4 +157,13 @@ export default {
     }
   }
 }
+
+.grey-box {
+  background-color: rgba(0, 0, 0, 0.03);
+
+  h5 {
+    font-weight: 600;
+  }
+}
+
 </style>
