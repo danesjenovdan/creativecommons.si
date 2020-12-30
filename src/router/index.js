@@ -4,6 +4,7 @@ import Domov from '../views/Domov.vue';
 import Isci from '../views/Isci.vue';
 import Deli from '../views/Deli.vue';
 import KakoDeluje from '../views/KakoDeluje.vue';
+import Zgodovina from '../views/Zgodovina.vue';
 
 Vue.use(VueRouter);
 
@@ -28,16 +29,11 @@ const routes = [
     name: 'KakoDeluje',
     component: KakoDeluje,
   },
-  /*
   {
-    path: '/about',
-    name: 'About',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "about" *//* '../views/About.vue'),
+    path: '/zgodovina',
+    name: 'Zgodovina',
+    component: Zgodovina,
   },
-  */
 ];
 
 const router = new VueRouter({

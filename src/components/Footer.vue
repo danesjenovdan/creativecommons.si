@@ -4,9 +4,9 @@
       <b-row class="py-4 justify-content-between">
         <div>
           <span class="pr-4">O CC Slovenija</span>
-          <router-link to="/isci">Zdaj</router-link>
+          <router-link to="/">Zdaj</router-link>
           <span class="px-2">|</span>
-          <router-link to="/isci">Zgodovina</router-link>
+          <router-link to="/zgodovina">Zgodovina</router-link>
         </div>
         <div>
           <span class="pr-4">O CC</span>
