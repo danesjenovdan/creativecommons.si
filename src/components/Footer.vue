@@ -10,7 +10,7 @@
         </div>
         <div>
           <span class="pr-4">O CC</span>
-          <router-link to="/isci">Kaj je CC?</router-link>
+          <router-link to="/kaj-je-cc">Kaj je CC?</router-link>
           <span class="px-2">|</span>
           <router-link to="/o-ccgn">O CCGN</router-link>
         </div>

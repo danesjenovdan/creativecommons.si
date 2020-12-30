@@ -6,6 +6,7 @@ import Deli from '../views/Deli.vue';
 import KakoDeluje from '../views/KakoDeluje.vue';
 import Zgodovina from '../views/Zgodovina.vue';
 import CCGN from '../views/CCGN.vue';
+import KajJeCC from '../views/KajJeCC.vue';
 
 Vue.use(VueRouter);
 
@@ -39,6 +40,11 @@ const routes = [
     path: '/o-ccgn',
     name: 'CCGN',
     component: CCGN,
+  },
+  {
+    path: '/kaj-je-cc',
+    name: 'KajJeCC',
+    component: KajJeCC,
   },
 ];
 
