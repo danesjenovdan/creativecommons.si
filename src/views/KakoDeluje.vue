@@ -6,7 +6,7 @@
       </b-col>
     </b-row>
     <b-row class="justify-content-center">
-      <b-col cols="8">
+      <b-col lg="8">
         <p>
           Creative Commons ustvarjalcem ponuja vnaprej pripravljene licence, s katerimi jasno
           določijo dovoljene in nedovoljene uporabe svojih del, tako da lahko dela svobodneje
@@ -185,20 +185,52 @@ li::before {
 .grey-box {
   margin: 2rem 0;
   padding: 2rem;
+  text-align: center;
+
+  div:first-child {
+    border-bottom: black solid 1px;
+    margin-bottom: 1.5rem;
+    padding-bottom: 1.5rem;
+  }
+
+  @media (min-width: 768px) {
+    text-align: left;
+
+    div:first-child {
+      border-bottom: none;
+      margin-bottom: 0;
+      padding-bottom: 0;
+      text-align: right;
+      padding-right: 2rem;
+    }
+  }
+
+  @media (min-width: 992px) {
+    div:first-child {
+      text-align: left;
+      padding-right: 15px;
+    }
+  }
 
   .license-img {
     height: 4rem;
   }
 
   .license-name {
-    font-size: 4rem;
+    font-size: 2.5rem;
     font-weight: 600;
     box-shadow: inset 0 -0.6em #c8eb00;
+
+    @media (min-width: 992px) {
+      font-size: 4rem;
+    }
   }
 
   .text-box {
-    border-left: black solid 1px;
-    padding: 0 2rem;
+    @media (min-width: 768px) {
+      border-left: black solid 1px;
+      padding: 0 2rem;
+    }
 
     h5 {
       text-transform: uppercase;

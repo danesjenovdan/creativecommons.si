@@ -3,17 +3,17 @@
     <b-container>
       <b-row>
         <b-col>
-          <h1 class="py-4 text-center">Kaj iščeš?</h1>
+          <h1 class="pt-4 text-center">Kaj iščeš?</h1>
         </b-col>
       </b-row>
       <b-row class="justify-content-center align-items-center mb-4">
-        <img src="../assets/bulb.svg" class="bulb-icon">
-        <span class="sub-header text-center font-italic">
+        <img src="../assets/bulb.svg" class="bulb-icon mb-2 mb-md-0">
+        <span class="sub-header ml-md-1 text-center font-italic">
           Vsi materiali, ki jih najdeš med zadetki, so na voljo za ponovno uporabo.
         </span>
       </b-row>
       <b-row class="mt-2 mb-5 justify-content-center">
-        <b-col cols="7">
+        <b-col lg="7">
           <img src="../assets/search.svg" class="search-icon">
           <input type="text" name="s">
         </b-col>
@@ -31,13 +31,16 @@ import IsciPodrobnosti from '@/components/IsciPodrobnosti.vue';
 export default {
   components: { IsciFilter, IsciPodrobnosti },
 };
-
+/*
+export default {
+  components: { IsciPodrobnosti },
+};
+*/
 </script>
 
 <style scoped lang="scss">
 
 .sub-header {
-  margin-left: 0.5rem;
   color: #595959;
 }
 

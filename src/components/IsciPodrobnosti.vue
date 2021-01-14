@@ -7,7 +7,7 @@
     </div>
   </b-row>
   <b-row class="justify-content-center">
-    <b-col cols="10">
+    <b-col lg="10">
       <img src="../assets/Layer_4.png" class="img-fluid">
     </b-col>
   </b-row>
@@ -15,7 +15,7 @@
     <button class="my-4">Prenesi sliko</button>
   </b-row>
   <b-row class="image-props">
-    <b-col cols="4">
+    <b-col lg="4">
       <div class="grey-box">
         <h4>Attribution</h4>
         <div class="p-3 border-bottom border-dark">
@@ -29,7 +29,9 @@
           <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">
             Creative Commons Attribution-ShareAlike 4.0 International License
           </a>.
-          <button>SKOPIRAJ OBOGATENI TEKST</button>
+          <div>
+            <button>Skopiraj obogateni tekst</button>
+          </div>
         </div>
         <div class="p-3">
           <div class="code-section">
@@ -39,7 +41,7 @@
         </div>
       </div>
     </b-col>
-    <b-col cols="4">
+    <b-col lg="4">
       <div class="grey-box information">
         <h4>Informacije</h4>
         <div class="p-3">
@@ -56,7 +58,7 @@
         </div>
       </div>
     </b-col>
-    <b-col cols="4">
+    <b-col lg="4">
       <div class="grey-box">
         <h4>Deli</h4>
         <div>
@@ -76,30 +78,30 @@
       <div class="grey-box images">
         <h4>Related images</h4>
         <b-row class="px-3">
-          <b-col cols="3">
+          <b-col lg="3">
             <img src="../assets/Layer_4.png" class="img-fluid">
           </b-col>
-          <b-col cols="3">
+          <b-col lg="3">
             <img src="../assets/Layer_4.png" class="img-fluid">
           </b-col>
-          <b-col cols="3">
+          <b-col lg="3">
             <img src="../assets/Layer_4.png" class="img-fluid">
           </b-col>
-          <b-col cols="3">
+          <b-col lg="3">
             <img src="../assets/Layer_4.png" class="img-fluid">
           </b-col>
         </b-row>
         <b-row class="px-3">
-          <b-col cols="3">
+          <b-col lg="3">
             <img src="../assets/Layer_4.png" class="img-fluid">
           </b-col>
-          <b-col cols="3">
+          <b-col lg="3">
             <img src="../assets/Layer_4.png" class="img-fluid">
           </b-col>
-          <b-col cols="3">
+          <b-col lg="3">
             <img src="../assets/Layer_4.png" class="img-fluid">
           </b-col>
-          <b-col cols="3">
+          <b-col lg="3">
             <img src="../assets/Layer_4.png" class="img-fluid">
           </b-col>
         </b-row>
@@ -156,7 +158,7 @@ button {
 }
 
 .image-props {
-  margin: 3rem;
+  margin-top: 3rem;
 
   h4 {
     text-transform: uppercase;

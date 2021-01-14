@@ -6,8 +6,8 @@
         <h3 class="pb-4 text-center">13.2.2021, 10.00-18.00</h3>
       </b-col>
     </b-row>
-    <b-row class="justify-content-center">
-      <b-col cols="8">
+    <b-row class="justify-content-center mb-4 text-center text-md-left">
+      <b-col lg="8">
         <p>
           Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt
           ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
@@ -35,9 +35,5 @@
 </script>
 
 <style scoped lang="scss">
-
-p {
-  font-size: 1.2rem;
-}
 
 </style>

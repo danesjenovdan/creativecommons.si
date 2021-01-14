@@ -5,8 +5,8 @@
         <h1 class="pt-4 pb-4 text-center">Razvoj CC gibanja v Sloveniji</h1>
       </b-col>
     </b-row>
-    <b-row class="mb-5 justify-content-center">
-      <b-col cols="8">
+    <b-row class="mb-5 justify-content-center text-center text-md-left">
+      <b-col lg="8">
         <p>
           <a href="https://network.creativecommons.org/">Creative Commons Global Network</a> (CCGN)
           je del CC gibanja, ki ljudi s celega sveta povezuje pod skupno vizijo, tj. uresničevanje
@@ -41,7 +41,6 @@ export default {
 <style scoped lang="scss">
 p {
   margin-bottom: 1rem;
-  font-size: 1.2rem;
 }
 
 a {

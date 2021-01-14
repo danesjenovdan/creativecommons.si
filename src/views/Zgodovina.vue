@@ -5,8 +5,8 @@
         <h1 class="pt-4 pb-4 text-center">Razvoj CC gibanja v Sloveniji</h1>
       </b-col>
     </b-row>
-    <b-row class="mb-5 justify-content-center">
-      <b-col cols="8">
+    <b-row class="mb-5 justify-content-center text-center text-md-left">
+      <b-col lg="8">
         <p>
           Organizacija je bila ustanovljen leta 2001 in konec leta 2002 je že izšla prva različica
           CC licenc. Inštitut za intelektualno lastnino (IPI) je v Sloveniji že leta 2005 poskrbel
@@ -47,7 +47,6 @@ export default {
 
 p {
   margin-bottom: 1rem;
-  font-size: 1.2rem;
 }
 
 a {

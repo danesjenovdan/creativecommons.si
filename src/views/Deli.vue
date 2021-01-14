@@ -2,11 +2,11 @@
   <b-container>
     <b-row>
       <b-col>
-        <h1 class="pt-4 pb-4">Izberi primerno licenco</h1>
+        <h1 class="pt-4 pb-4 text-center text-md-left">Izberi primerno licenco</h1>
       </b-col>
     </b-row>
     <b-row>
-      <b-col cols="6">
+      <b-col md="6">
         <hr>
         <p class="form-question">Ali dovoliš predelave svojega dela?</p>
         <div class="form-inputs">
@@ -58,7 +58,7 @@
         </div>
         <hr>
       </b-col>
-      <b-col cols="6" class="grey-box">
+      <b-col md="6" class="grey-box mt-4 mt-md-0">
         <h5 class="pt-4 text-uppercase">Predlagana licenca</h5>
         <div id="generated-license-icon"></div>
         <div id="generated-license-text"></div>
@@ -66,7 +66,7 @@
     </b-row>
     <b-row class="mt-4">
       <b-col>
-        <h1 class="pt-4">Dodaj CC pasico na svoje spletno mesto</h1>
+        <h1 class="pt-4 text-center text-md-left">Dodaj CC pasico na svoje spletno mesto</h1>
       </b-col>
     </b-row>
     <b-row class="mb-4">
@@ -88,59 +88,61 @@
       <b-col cols="12" class="grey-box">
       </b-col>
     </b-row>
-    <b-row>
+    <b-row class="mb-5">
       <b-col>
-        <h1 class="pt-4 pb-4">Deli svoje delo na kateri od platform, ki podpirajo CC</h1>
+        <h1 class="pt-4 pb-4 text-center text-md-left">
+          Deli svoje delo na kateri od platform, ki podpirajo CC
+        </h1>
         <hr class="mb-4">
-        <b-row class="mt-5 mb-5 justify-content-center">
-          <b-col cols="2" class="d-flex justify-content-center align-items-center">
-            <img src="../assets/flickr.png" alt="" class="img-fluid">
+        <b-row class="my-lg-5 justify-content-center">
+          <b-col md="2" class="d-flex justify-content-center align-items-center my-3 my-lg-0">
+            <img src="../assets/logos/flickr.png" alt="" class="img-fluid">
           </b-col>
-          <b-col cols="2" class="d-flex justify-content-center align-items-center">
-            <img src="../assets/bandcamp.png" alt="" class="img-fluid">
+          <b-col md="2" class="d-flex justify-content-center align-items-center my-3 my-lg-0">
+            <img src="../assets/logos/bandcamp.png" alt="" class="img-fluid">
           </b-col>
-          <b-col cols="2" class="d-flex justify-content-center align-items-center">
-            <img src="../assets/wikipedia.jpg" alt="" class="img-fluid">
+          <b-col md="2" class="d-flex justify-content-center align-items-center my-3 my-lg-0">
+            <img src="../assets/logos/wikipedia.jpg" alt="" class="img-fluid">
           </b-col>
-          <b-col cols="2" class="d-flex justify-content-center align-items-center">
-            <img src="../assets/youtube.png" alt="" class="img-fluid">
+          <b-col md="2" class="d-flex justify-content-center align-items-center my-3 my-lg-0">
+            <img src="../assets/logos/youtube.png" alt="" class="img-fluid">
           </b-col>
-          <b-col cols="2" class="d-flex justify-content-center align-items-center">
-            <img src="../assets/sketchfab.png" alt="" class="img-fluid">
-          </b-col>
-        </b-row>
-        <b-row class="mt-5 mb-5 justify-content-center">
-          <b-col cols="2" class="d-flex justify-content-center align-items-center">
-            <img src="../assets/internet_archive.png" alt="" class="img-fluid">
-          </b-col>
-          <b-col cols="2" class="d-flex justify-content-center align-items-center">
-            <img src="../assets/vimeo.png" alt="" class="img-fluid">
-          </b-col>
-          <b-col cols="2" class="d-flex justify-content-center align-items-center">
-            <img src="../assets/wikimedia.png" alt="" class="img-fluid">
-          </b-col>
-          <b-col cols="2" class="d-flex justify-content-center align-items-center">
-            <img src="../assets/fma.jpg" alt="" class="img-fluid">
-          </b-col>
-          <b-col cols="2" class="d-flex justify-content-center align-items-center">
-            <img src="../assets/skillscommon.png" alt="" class="img-fluid">
+          <b-col md="2" class="d-flex justify-content-center align-items-center my-3 my-lg-0">
+            <img src="../assets/logos/sketchfab.png" alt="" class="img-fluid">
           </b-col>
         </b-row>
-        <b-row class="mt-5 mb-5 justify-content-center">
-          <b-col cols="2" class="d-flex justify-content-center align-items-center">
-            <img src="../assets/europeana.jpg" alt="" class="img-fluid">
+        <b-row class="my-lg-5 justify-content-center">
+          <b-col md="2" class="d-flex justify-content-center align-items-center my-3 my-lg-0">
+            <img src="../assets/logos/internet_archive.png" alt="" class="img-fluid">
           </b-col>
-          <b-col cols="2" class="d-flex justify-content-center align-items-center">
-            <img src="../assets/tribe_of_noise.jpg" alt="" class="img-fluid">
+          <b-col md="2" class="d-flex justify-content-center align-items-center my-3 my-lg-0">
+            <img src="../assets/logos/vimeo.png" alt="" class="img-fluid">
           </b-col>
-          <b-col cols="2" class="d-flex justify-content-center align-items-center">
-            <img src="../assets/Jamendo.png" alt="" class="img-fluid">
+          <b-col md="2" class="d-flex justify-content-center align-items-center my-3 my-lg-0">
+            <img src="../assets/logos/wikimedia.png" alt="" class="img-fluid">
           </b-col>
-          <b-col cols="2" class="d-flex justify-content-center align-items-center">
-            <img src="../assets/mit.png" alt="" class="img-fluid">
+          <b-col md="2" class="d-flex justify-content-center align-items-center my-3 my-lg-0">
+            <img src="../assets/logos/fma.jpg" alt="" class="img-fluid">
           </b-col>
-          <b-col cols="2" class="d-flex justify-content-center align-items-center">
-            <img src="../assets/PLOS.jpg" alt="" class="img-fluid">
+          <b-col md="2" class="d-flex justify-content-center align-items-center my-3 my-lg-0">
+            <img src="../assets/logos/skillscommon.png" alt="" class="img-fluid">
+          </b-col>
+        </b-row>
+        <b-row class="my-lg-5 justify-content-center">
+          <b-col md="2" class="d-flex justify-content-center align-items-center my-3 my-lg-0">
+            <img src="../assets/logos/europeana.jpg" alt="" class="img-fluid">
+          </b-col>
+          <b-col md="2" class="d-flex justify-content-center align-items-center my-3 my-lg-0">
+            <img src="../assets/logos/tribe_of_noise.jpg" alt="" class="img-fluid">
+          </b-col>
+          <b-col md="2" class="d-flex justify-content-center align-items-center my-3 my-lg-0">
+            <img src="../assets/logos/Jamendo.png" alt="" class="img-fluid">
+          </b-col>
+          <b-col md="2" class="d-flex justify-content-center align-items-center my-3 my-lg-0">
+            <img src="../assets/logos/mit.png" alt="" class="img-fluid">
+          </b-col>
+          <b-col md="2" class="d-flex justify-content-center align-items-center my-3 my-lg-0">
+            <img src="../assets/logos/PLOS.jpg" alt="" class="img-fluid">
           </b-col>
         </b-row>
       </b-col>
@@ -150,17 +152,15 @@
 
 <style scoped lang="scss">
 
-*,
-*:before,
-*:after {
-  box-sizing: border-box;
-}
-
 hr {
   border-color: black;
-  //width: 25%;
-  width: 6rem;
-  margin: 0 0 0 -1rem;
+  width: 100%;
+  margin: 0;
+
+  @media (min-width: 768px) {
+    width: 6rem;
+    margin: 0 0 0 -1rem;
+  }
 }
 
 .form-question {
@@ -168,10 +168,19 @@ hr {
   font-style: italic;
   font-weight: 500;
   padding-top: 1.5rem;
+  text-align: center;
+
+  @media (min-width: 768px) {
+    text-align: left;
+  }
 }
 
 .form-inputs {
   display: flex;
+  justify-content: center;
+  @media (min-width: 768px) {
+    justify-content: start;
+  }
 }
 
 .radio {

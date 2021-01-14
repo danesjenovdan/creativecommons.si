@@ -5,8 +5,8 @@
         <h1 class="pt-4 pb-4 text-center">Kaj je CC?</h1>
       </b-col>
     </b-row>
-    <b-row class="mb-5 justify-content-center">
-      <b-col cols="8">
+    <b-row class="mb-5 justify-content-center text-center text-md-left">
+      <b-col lg="8">
         <p>
           <a href="http://creativecommons.org/">Creative Commons</a> je globalno gibanje, ki se
           odziva na dve izraziti dejstvi, ki sta značilni za trenutno pravno urejanje ustvarjalnosti
@@ -48,7 +48,6 @@ export default {
 <style scoped lang="scss">
 p {
   margin-bottom: 1rem;
-  font-size: 1.2rem;
 }
 
 a {
