@@ -45,7 +45,8 @@
     </b-row>
     <b-row class="grey-box">
       <b-col>
-        <img src="../assets/licenses/license-CC0.png" alt="Licenca CC0 ikona" class="license-img"/>
+        <img src="../../public/licenses/license-CC0.png"
+             alt="Licenca CC0 ikona" class="license-img"/>
         <div><span class="license-name">CC0</span></div>
       </b-col>
       <b-col class="text-box">
@@ -60,7 +61,7 @@
     </b-row>
     <b-row class="grey-box">
       <b-col>
-        <img src="../assets/licenses/license-CC-BY.png"
+        <img src="../../public/licenses/license-CC BY.png"
              alt="Licenca CC-BY ikona" class="license-img"/>
         <div><span class="license-name">CC BY</span></div>
       </b-col>
@@ -75,7 +76,7 @@
     </b-row>
     <b-row class="grey-box">
       <b-col>
-        <img src="../assets/licenses/license-CC-BY-SA.png"
+        <img src="../../public/licenses/license-CC BY-SA.png"
              alt="Licenca CC BY-SA ikona" class="license-img"/>
         <div><span class="license-name">CC BY-SA</span></div>
       </b-col>
@@ -91,7 +92,7 @@
     </b-row>
     <b-row class="grey-box">
       <b-col>
-        <img src="../assets/licenses/license-CC-BY-ND.png"
+        <img src="../../public/licenses/license-CC BY-ND.png"
              alt="Licenca CC-BY-ND ikona" class="license-img"/>
         <div><span class="license-name">CC BY-ND</span></div>
       </b-col>
@@ -106,7 +107,7 @@
     </b-row>
     <b-row class="grey-box">
       <b-col>
-        <img src="../assets/licenses/license-CC-BY-NC.png"
+        <img src="../../public/licenses/license-CC BY-NC.png"
              alt="License CC BY-NC ikona" class="license-img"/>
         <div><span class="license-name">CC BY-NC</span></div>
       </b-col>
@@ -121,7 +122,7 @@
     </b-row>
     <b-row class="grey-box">
       <b-col>
-        <img src="../assets/licenses/license-BY-NC-SA.png"
+        <img src="../../public/licenses/license-CC BY-NC-SA.png"
              alt="Licenca CC BY-NC-SA ikona" class="license-img"/>
         <div><span class="license-name">CC BY-NC-SA</span></div>
       </b-col>
@@ -137,7 +138,7 @@
     </b-row>
     <b-row class="grey-box">
       <b-col>
-        <img src="../assets/licenses/license-BY-NC-ND.png"
+        <img src="../../public/licenses/license-CC BY-NC-ND.png"
              alt="Licenca CC BY-NC-ND ikona" class="license-img"/>
         <div><span class="license-name">CC BY-NC-ND</span></div>
       </b-col>

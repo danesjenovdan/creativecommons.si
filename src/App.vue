@@ -46,4 +46,11 @@ p {
   }
 }
 
+.code-section {
+  background-color: white;
+  border: 3px solid black;
+  border-radius: 1rem;
+  padding: 1rem;
+}
+
 </style>
