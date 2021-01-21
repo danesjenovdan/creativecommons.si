@@ -11,17 +11,17 @@
         <p class="form-question">Ali dovoliš predelave svojega dela?</p>
         <div class="form-inputs">
           <label class="radio">
-            <input type="radio" name="predelava" value="da" checked v-on:click="generateLicense">
+            <input type="radio" v-model="predelava" value="da" v-on:change="generateLicense">
             <span class="radio-control"></span>
             <span class="radio-label">Da</span>
           </label>
           <label class="radio">
-            <input type="radio" name="predelava" value="ne" v-on:click="generateLicense">
+            <input type="radio" v-model="predelava" value="ne" v-on:change="generateLicense">
             <span class="radio-control"></span>
             <span class="radio-label">Ne</span>
           </label>
           <label class="radio">
-            <input type="radio" name="predelava" value="pogojno" v-on:click="generateLicense">
+            <input type="radio" v-model="predelava" value="pogojno" v-on:change="generateLicense">
             <span class="radio-control"></span>
             <span class="radio-label">Da, če predelave ponudijo pod enakimi pogoji.</span>
           </label>
@@ -30,12 +30,12 @@
         <p class="form-question">Ali dovoliš komercialno uporabo svojega dela?</p>
         <div class="form-inputs">
           <label class="radio">
-            <input type="radio" name="komercialno" value="da" checked v-on:click="generateLicense">
+            <input type="radio" v-model="komercialno" value="da" v-on:change="generateLicense">
             <span class="radio-control"></span>
             <span class="radio-label">Da</span>
           </label>
           <label class="radio">
-            <input type="radio" name="komercialno" value="ne" v-on:click="generateLicense">
+            <input type="radio" v-model="komercialno" value="ne" v-on:change="generateLicense">
             <span class="radio-control"></span>
             <span class="radio-label">Ne</span>
           </label>
@@ -44,12 +44,12 @@
         <p class="form-question">Ali želiš, da te vedno navedejo kot avtorja?</p>
         <div class="form-inputs">
           <label class="radio">
-            <input type="radio" name="avtorstvo" value="da" v-on:click="generateLicense">
+            <input type="radio" v-model="avtorstvo" value="da" v-on:change="generateLicense">
             <span class="radio-control"></span>
             <span class="radio-label">Da</span>
           </label>
           <label class="radio">
-            <input type="radio" name="avtorstvo" value="ne" checked v-on:click="generateLicense">
+            <input type="radio" v-model="avtorstvo" value="ne" v-on:change="generateLicense">
             <span class="radio-control"></span>
             <span class="radio-label">Ne</span>
           </label>
@@ -78,12 +78,12 @@
         <hr class="mt-4 mb-4">
         <div class="form-inputs">
           <label class="radio">
-            <input type="radio" name="pasica" value="navadna" checked v-on:click="shareLicense">
+            <input type="radio" v-model="pasica" value="navadna" checked v-on:change="shareLicense">
             <span class="radio-control"></span>
             <span class="radio-label">navadna pasica</span>
           </label>
           <label class="radio">
-            <input type="radio" name="pasica" value="mala" v-on:click="shareLicense">
+            <input type="radio" v-model="pasica" value="mala" v-on:change="shareLicense">
             <span class="radio-control"></span>
             <span class="radio-label">mala pasica</span>
           </label>
@@ -92,10 +92,10 @@
       <b-col cols="12" class="grey-box">
         <b-row class="justify-content-center">
           <b-col lg="9">
-            <div id="pasica" class="d-inline-block" v-html="p">
+            <div id="pasica" class="d-inline-block" v-html="pasicaKoda">
             </div>
-            <div class="code-section my-4">{{ p }}</div>
-            <button v-clipboard="p">Skopiraj kodo za vdelavo</button>
+            <div class="code-section my-4">{{ pasicaKoda }}</div>
+            <button v-clipboard="pasicaKoda">Skopiraj kodo za vdelavo</button>
           </b-col>
         </b-row>
       </b-col>
@@ -168,8 +168,14 @@ export default {
   name: 'Deli',
   data() {
     return {
+      predelava: 'da',
+      komercialno: 'da',
+      avtorstvo: 'ne',
+      pasica: 'navadna',
+      pasicaKoda: '<a rel="license" href="http://creativecommons.org/licenses/zero/1.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/zero/1.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/zero/1.0/">CC0 1.0 Universal (CC0 1.0) Public Domain Dedication</a>.',
+      pasicaNavadna: '88x31',
+      pasicaMala: '80x15',
       licenseName: 'CC0',
-      p: '<a rel="license" href="http://creativecommons.org/licenses/zero/1.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/zero/1.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/zero/1.0/">CC0 1.0 Universal (CC0 1.0) Public Domain Dedication</a>.',
       licenseText: {
         CC0: '<h5 class="text-uppercase">Javna domena</h5>'
           + '<p>Avtor svoje delo da v javno domeno in se tako odpove vsem pravicam, ki se jim lahko '
@@ -225,37 +231,26 @@ export default {
   },
   methods: {
     generateLicense() {
-      const v1 = document.querySelector('input[name="predelava"]:checked');
-      const v2 = document.querySelector('input[name="komercialno"]:checked');
-      const v3 = document.querySelector('input[name="avtorstvo"]:checked');
-
-      if (v1 && v2 && v3) {
-        if (v3.value === 'ne') {
-          this.licenseName = 'CC0';
-        } else {
-          this.licenseName = 'CC BY';
-          if (v2.value === 'ne') {
-            this.licenseName = this.licenseName.concat('-NC');
-            if (v1.value === 'ne') {
-              this.licenseName = this.licenseName.concat('-ND');
-            } else if (v1.value === 'pogojno') {
-              this.licenseName = this.licenseName.concat('-SA');
-            }
-          } else if (v1.value === 'ne') {
-            this.licenseName = this.licenseName.concat('-ND');
-          } else if (v1.value === 'pogojno') {
-            this.licenseName = this.licenseName.concat('-SA');
-          }
+      if (this.avtorstvo === 'ne') {
+        this.licenseName = 'CC0';
+      } else {
+        this.licenseName = 'CC BY';
+        if (this.komercialno === 'ne') {
+          this.licenseName = this.licenseName.concat('-NC');
+        }
+        if (this.predelava === 'ne') {
+          this.licenseName = this.licenseName.concat('-ND');
+        } else if (this.predelava === 'pogojno') {
+          this.licenseName = this.licenseName.concat('-SA');
         }
       }
       this.shareLicense();
     },
     shareLicense() {
-      const pasica = document.querySelector('input[name="pasica"]:checked');
-      if (pasica.value === 'navadna') {
-        this.p = this.navadnaPasica[this.licenseName];
+      if (this.pasica === 'navadna') {
+        this.pasicaKoda = this.navadnaPasica[this.licenseName];
       } else {
-        this.p = this.malaPasica[this.licenseName];
+        this.pasicaKoda = this.malaPasica[this.licenseName];
       }
     },
   },
