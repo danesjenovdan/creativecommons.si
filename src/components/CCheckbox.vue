@@ -1,18 +1,30 @@
 <template>
-  <div class="d-flex">
-    <label>
-      <input type="checkbox" @change="$emit('input', $event.target.checked)" />
+  <div>
+    <label class="d-flex align-items-center" v-for="{text, value} in options" :key="value">
+      <input
+        v-model="temp"
+        :value="value"
+        type="checkbox"
+      />
       <span class="checkmark"></span>
+      <span class="text">{{ text }}</span>
     </label>
-    <span class="text">{{ text }}</span>
   </div>
 </template>
 
 <script>
 export default {
   name: 'CCheckbox',
-  props: {
-    text: String,
+  props: ['options', 'checked'],
+  computed: {
+    temp: {
+      get() {
+        return this.checked;
+      },
+      set(newValue) {
+        this.$emit('update:checked', newValue);
+      },
+    },
   },
 };
 </script>
@@ -21,7 +33,8 @@ export default {
 
 label {
   position: relative;
-  margin-bottom: 0;
+  margin: 0.5rem 0;
+  cursor: pointer;
 }
 
 .text {
@@ -29,7 +42,6 @@ label {
   font-weight: 500;
   font-size: 0.9rem;
   padding-left: 0.5rem;
-  margin-bottom: 0.5rem;
 }
 
 .checkmark {
@@ -37,7 +49,6 @@ label {
   height: 1rem;
   border: 2px solid black;
   display: inline-block;
-  cursor: pointer;
 
   &:after {
     content: "";

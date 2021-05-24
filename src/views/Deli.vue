@@ -95,7 +95,7 @@
             <div id="pasica" class="d-inline-block" v-html="pasicaKoda">
             </div>
             <div class="code-section my-4">{{ pasicaKoda }}</div>
-            <button v-clipboard="pasicaKoda">Skopiraj kodo za vdelavo</button>
+            <button class="button" v-clipboard="pasicaKoda">Skopiraj kodo za vdelavo</button>
           </b-col>
         </b-row>
       </b-col>
@@ -273,15 +273,7 @@ hr {
 
 button {
   position: absolute;
-  background-color: #c8eb00;
-  border: none;
-  border-radius: 2rem;
-  text-transform: uppercase;
-  font-style: italic;
-  font-weight: 500;
-  font-size: 1.3rem;
-  padding: 0.7rem 2.5rem;
-  // margin: 1rem 0;
+  padding: 0.5rem 2.5rem;
 }
 
 .form-question {

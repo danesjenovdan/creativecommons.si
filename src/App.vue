@@ -1,7 +1,9 @@
 <template>
   <div id="app">
-    <Navigation></Navigation>
-    <router-view/>
+    <div class="content">
+      <Navigation></Navigation>
+      <router-view/>
+    </div>
     <Footer/>
   </div>
 </template>
@@ -28,6 +30,13 @@ export default {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: black;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.content {
+  flex: 1 0 auto;
 }
 
 p {
@@ -51,6 +60,32 @@ p {
   border: 3px solid black;
   border-radius: 1rem;
   padding: 1rem;
+  overflow-wrap: break-word;
+  font-size: 0.875rem;
+}
+
+.button {
+  background-color: #c8eb00;
+  border: 2px solid #c8eb00;
+  border-radius: 2rem;
+  text-transform: uppercase;
+  font-style: italic;
+  font-weight: 500;
+  font-size: 1.3rem;
+  color: black;
+  padding: 0.7rem 2.5rem;
+  margin: 1rem 0;
+
+  &:hover {
+    border-color: black;
+    transition: border-color 0.5s ease;
+    text-decoration: none;
+    color: black;
+  }
+
+  &:focus {
+    outline: none;
+  }
 }
 
 </style>
