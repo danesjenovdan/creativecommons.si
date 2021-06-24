@@ -3,7 +3,9 @@
   <b-container class="navigation-bar pb-4">
     <b-row class="pt-4">
       <b-col md="5">
-        <img alt="CC SLO logo" src="@/assets/cc_slo_logo.svg">
+        <router-link to="/">
+          <img alt="CC SLO logo" class="img-fluid" src="@/assets/cc_slo_logo.svg">
+        </router-link>
       </b-col>
     </b-row>
     <b-row class="my-4 text-center text-md-left">
