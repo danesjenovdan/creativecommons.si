@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: creative-commons
+  labels:
+    app: creative-commons
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: creative-commons
+  template:
+    metadata:
+      labels:
+        app: creative-commons
+    spec:
+      containers:
+      - name: creative-commons
+        image: creative-commons
+        ports:
+        - containerPort: 80

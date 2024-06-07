@@ -1,0 +1,23 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: creative-commons
+  annotations:
+    cert-manager.io/cluster-issuer: "letsencrypt-production"
+spec:
+  ingressClassName: nginx
+  tls:
+  - hosts:
+    - creative-commons.lb.djnd.si
+    secretName: creative-commons-tls
+  rules:
+  - host: creative-commons.lb.djnd.si
+    http:
+      paths:
+      - path: /
+        pathType: Prefix
+        backend:
+          service:
+            name: creative-commons
+            port:
+              number: 80
