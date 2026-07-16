@@ -8,4 +8,4 @@ resources:
 images:
   - name: creative-commons
     newName: rg.fr-par.scw.cloud/djnd/creative-commons
-    newTag: "latest"
+    newTag: '7b916b30e11ceccc9515f8be9c08eada2db2e14f'
