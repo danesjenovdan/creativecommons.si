@@ -5,19 +5,19 @@ metadata:
   annotations:
     cert-manager.io/cluster-issuer: "letsencrypt-production"
 spec:
-  ingressClassName: nginx
+  ingressClassName: traefik
   tls:
-  - hosts:
-    - creative-commons.lb.djnd.si
-    secretName: creative-commons-tls
+    - hosts:
+        - creativecommons.djnd.si
+      secretName: creative-commons-tls
   rules:
-  - host: creative-commons.lb.djnd.si
-    http:
-      paths:
-      - path: /
-        pathType: Prefix
-        backend:
-          service:
-            name: creative-commons
-            port:
-              number: 80
+    - host: creativecommons.djnd.si
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: creative-commons
+                port:
+                  number: 80
