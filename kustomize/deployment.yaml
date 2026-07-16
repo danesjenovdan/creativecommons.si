@@ -15,7 +15,7 @@ spec:
         app: creative-commons
     spec:
       containers:
-      - name: creative-commons
-        image: creative-commons
-        ports:
-        - containerPort: 80
+        - name: creative-commons
+          image: creative-commons
+          ports:
+            - containerPort: 80
